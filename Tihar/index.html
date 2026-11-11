@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DIVINE TIHAR — A Celebration of Lights, Love &amp; Nepali Tradition</title>
+<meta name="description" content="Explore all five days of Tihar, the Nepali festival of lights: Kaag, Kukur, Gai &amp; Laxmi Puja, Govardhan/Goru/Mha Puja and Bhai Tika. Created by Aayush Ghimire.">
+<meta name="author" content="Aayush Ghimire">
+<link rel="stylesheet" href="Code.css">
+</head>
+<body>
+<div id="loader"><div class="diya"></div><p>TIHAR</p></div>
+<div id="progress"></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+
+<header id="nav">
+  <a href="#top" class="logo">DIVINE TIHAR</a>
+  <button id="menuBtn" aria-label="Menu" aria-expanded="false">☰</button>
+  <nav id="menu">
+    <a href="#journey" data-i18n="nav1">The Five Days</a>
+    <a href="#special" data-i18n="nav2">Make It Special</a>
+    <a href="#deusi" data-i18n="nav3">Deusi-Bhailo</a>
+    <a href="#gallery" data-i18n="nav4">Gallery</a>
+    <a href="#culture" data-i18n="nav5">Culture</a>
+    <button id="lang" aria-label="Switch language">नेपाली</button>
+  </nav>
+</header>
+
+<main>
+<section id="top" class="hero">
+  <div class="house" aria-hidden="true">
+    <svg viewBox="0 0 400 200"><path d="M20 200V110L200 30l180 80v90z" fill="#3a0d12"/><path d="M0 112L200 22l200 90" stroke="#d4a017" stroke-width="4" fill="none"/><rect x="170" y="120" width="60" height="80" fill="#1a0507" stroke="#d4a017"/><rect x="60" y="125" width="50" height="40" fill="#f39a1e"/><rect x="290" y="125" width="50" height="40" fill="#f39a1e"/><path d="M0 20Q50 50 100 20T200 20T300 20T400 20" stroke="#f5a623" stroke-width="6" fill="none" stroke-dasharray="2 10" stroke-linecap="round"/></svg>
+  </div>
+  <p class="eyebrow" data-i18n="tag">Five Days. Endless Traditions. One Beautiful Celebration.</p>
+  <h1>TIHAR<br><span data-i18n="h1b">THE FESTIVAL OF LIGHTS</span></h1>
+  <p class="ne-title">शुभ दीपावली तथा तिहारको हार्दिक मंगलमय शुभकामना</p>
+  <p class="sub" data-i18n="sub">Tihar honours crows, dogs, cows, oxen and the bond of brothers and sisters. Lamps are lit so light can drive out darkness from every home.</p>
+  <a href="#journey" class="btn" data-i18n="enter">ENTER THE CELEBRATION</a>
+</section>
+
+<section id="journey">
+  <h2 data-i18n="jt">The Five-Day Journey</h2>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div class="bar"><i id="dayBar"></i></div>
+  <article id="panel" class="panel" aria-live="polite"></article>
+  <div class="pn"><button class="btn ghost" id="prev" data-i18n="prev">← Previous</button><button class="btn ghost" id="next" data-i18n="next">Next →</button></div>
+</section>
+
+<section id="special" class="alt">
+  <h2 data-i18n="st">How to Make Every Day Special</h2>
+  <div class="grid" id="ideas"></div>
+</section>
+
+<section id="deusi">
+  <h2 data-i18n="dt">Deusi-Bhailo</h2>
+  <div class="two">
+    <div id="deusiText"></div>
+    <div class="deusi-art" aria-hidden="true"><span class="lamp"></span><span class="lamp"></span><span class="lamp"></span><span class="lamp"></span><span class="lamp"></span></div>
+  </div>
+</section>
+
+<section id="gallery" class="alt">
+  <h2 data-i18n="gt">Gallery of Light</h2>
+  <div class="filters" id="filters"></div>
+  <div class="gal" id="gal"></div>
+</section>
+
+<section id="culture">
+  <h2 data-i18n="ct">Nepali Culture &amp; Tradition</h2>
+  <div class="grid" id="cultureGrid"></div>
+</section>
+</main>
+
+<footer>
+  <p class="quote" data-i18n="fq">Crafted with love, culture, and creativity.</p>
+  <p data-i18n="fw">Shubha Deepawali — may your home glow with joy.</p>
+  <p class="credit">Website created and designed by <strong>Aayush Ghimire</strong> · © <span id="yr"></span></p>
+</footer>
+
+<div id="lightbox" hidden><button id="lbClose" aria-label="Close">×</button><div id="lbBody"></div></div>
+<button id="top-btn" aria-label="Back to top">↑</button>
+
+<aside id="player" aria-label="Music player">
+  <button id="pToggle" aria-label="Open music player">♪</button>
+  <div id="pBody" hidden>
+    <canvas id="viz" width="160" height="34"></canvas>
+    <div id="pName">—</div>
+    <div class="bar"><i id="pBar"></i></div>
+    <div class="ctl">
+      <button id="pPrev" aria-label="Previous">⏮</button>
+      <button id="pPlay" aria-label="Play">▶</button>
+      <button id="pNext" aria-label="Next">⏭</button>
+      <button id="pMute" aria-label="Mute">🔊</button>
+    </div>
+    <input id="pVol" type="range" min="0" max="1" step="0.05" value="0.6" aria-label="Volume">
+    <select id="pSel" aria-label="Track"></select>
+    <small id="pMsg"></small>
+  </div>
+</aside>
+<script src="scripyt.js"></script>
+</body>
+</html>
